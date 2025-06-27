@@ -1,0 +1,159 @@
+\documentclass[a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{ulem} % 用于下划线
+\usepackage{tabularx} 
+
+% 页面设置
+\geometry{
+    a4paper,
+    margin = 1in  % Word默认页边距
+}
+
+% 字体设置
+\setCJKmainfont{SimSun}  % 宋体
+\setCJKfamilyfont{fangsong}{FangSong_GB2312}  % 仿宋GB2312
+
+% 行距设置 (24磅)
+\setlength{\baselineskip}{24pt}
+
+% 定义固定宽度的下划线
+\newcommand{\fixeduline}[2]{\uline{\makebox[#1][c]{#2}}} % 中间对齐的固定宽度下划线
+\newlength{\longuline}
+\setlength{\longuline}{10cm}
+\newlength{\shortuline}
+\setlength{\shortuline}{4.5cm}
+
+\begin{document}
+
+% ===================== 封面页 =====================
+
+\thispagestyle{empty} % 封面页无页眉页脚
+
+% 顶部留白
+\vspace*{2\baselineskip} % 顶部空两行
+
+% 第一张图片
+\begin{center}
+    \includegraphics[width=3.944in, height=0.986in]{figure/nufe.png}
+\end{center}
+
+% 图片间间距
+\vspace{\baselineskip} % 空一行
+
+% 第二张图片
+\begin{center}
+    \includegraphics[width=5.141in, height=1.0875in]{figure/文献综述.png}
+\end{center}
+
+% 图片后间距
+\vspace{2\baselineskip} % 空两行
+
+% "级"字部分
+\begin{center}
+    \fontsize{22pt}{24pt}\selectfont % 二号字
+    \fixeduline{2.5cm}{2022}级 
+\end{center}
+
+% 学生信息表格前间距
+\vspace{6\baselineskip} % 空四行
+
+% 学生信息表格 
+\begin{center}
+    \fontsize{15pt}{18pt}\selectfont % 小三号字
+    \fangsong % 仿宋GB2312
+    \begin{tabular}{ll}
+        \textbf{学\hspace{2em}院：} & \fixeduline{10cm}{应用数学学院}\\
+        \vspace{0.5\baselineskip} \\
+        \textbf{专\hspace{2em}业：} & \fixeduline{4cm}{金融数学}
+        \textbf{班级：} \fixeduline{4cm}{金数2201} \\
+        \vspace{0.5\baselineskip} \\
+        \textbf{学生姓名：} & \fixeduline{4cm}{yan}
+        \textbf{学号：} \fixeduline{4cm}{212022xxxx} \\
+        \vspace{0.5\baselineskip} \\
+        \textbf{完成日期：} & \fixeduline{10cm}{2025年6月27日} \\
+    \end{tabular}
+\end{center}
+
+% 完成日期后间距
+\vspace{4\baselineskip} % 空两行
+
+% 年月行
+\begin{center}
+    \fontsize{14pt}{16pt}\selectfont
+    \fixeduline{3cm}{二〇二五}年
+    \fixeduline{1.5cm}{六}月 
+\end{center}
+% 确保封面页内容在单页内
+\vfill % 将剩余内容推到底部
+
+% ===================== 说明页 =====================
+
+%\newpage
+% 说明部分
+% \begin{center}
+%     \fontsize{22pt}{24pt}\selectfont\heiti 说\hspace{1em}明
+% \end{center}
+% % 说明内容
+% {\fangsong\fontsize{14pt}{16pt}\selectfont
+% \textbf{第一部分 题目（2号黑体）}
+% \textbf{第二部分 摘要（小4号仿宋体）}
+% \textbf{第三部分 关键词（小4号仿宋体）}
+% \textbf{第四部分 正文（小4号仿宋体）}
+% \textbf{第五部分 参考文献（小4号仿宋体，参考文献编排格式参见《南京财经大学本科毕业论文（设计）规范化要求》）}
+% 使用A4纸打印，页边距使用word默认值，行间距固定值24磅。}
+
+% ===================== 正文页 =====================
+
+\newpage
+\pagenumbering{arabic}  % 设置页码格式为阿拉伯数字
+\setcounter{page}{1}    % 从第1页开始
+
+\begin{center}
+    \fontsize{22pt}{24pt}\selectfont\heiti 题目题目题目题目
+\end{center}
+
+\vspace{\baselineskip}
+
+{\fangsong\fontsize{12pt}{14pt}\selectfont
+
+\noindent \textbf{摘要：}
+本文探讨了实变函数理论中的定积分与复变函数理论中的复积分之间的深层联系与本质区别.
+通过调和函数理论,微分形式语言,泛函分析观点以及复几何中的Hodge结构,
+揭示了两者在现代数学结构中的统一性与差异性.
+文章重点从理论结构,积分特性与函数空间视角出发,深化对积分本质的理解.
+
+\vspace{\baselineskip}
+
+\noindent \textbf{关键词：}\quad 复积分 \quad Hodge结构 \quad 调和函数 \quad 微分形式
+
+\vspace{\baselineskip}
+
+%正文
+
+在微积分的发展过程中,定积分与复积分分别在实变与复变函数领域中形成了独立而丰富的理论体系.
+定积分主要处理实数函数在区间上的“面积”或“累积效应”,而复积分则更多关注解析函数在复平面上的行为,尤其强调路径相关性与函数的结构特性.
+\par 尽管表面上二者差异显著,但在更高层次数学视角中,它们却体现出一种深层的联系与统一性,
+特别是在微分形式理论,调和分析以及泛函分析的背景下.本文将围绕这些统一性展开讨论
+
+\vspace{\baselineskip}
+
+% ========== 参考文献 ==========
+\noindent \textbf{参考文献：}
+
+\vspace{0.5\baselineskip}
+
+[1] 刘国钧，陈绍业，王凤翥. 图书馆目录［M］. 北京：高等教育出版社，1957：15–18.
+
+[2] 辛希孟. 信息技术与信息服务国际研讨会论文集：A集［C］. 北京：中国社会科学出版社，1994.
+
+[3] 张筑生. 微分半动力系统的不变集［D］. 北京：北京大学数学系数学研究所，1983.
+
+[4] 冯西桥. 核反应堆压力管道与压力容器的LBB分析［R］. 北京：清华大学核能技术设计研究院，1997.
+
+}
+
+\end{document}
